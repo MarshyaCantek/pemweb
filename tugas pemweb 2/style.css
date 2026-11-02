@@ -1,0 +1,464 @@
+/* Variabel warna dan jenis font agar mudah digunakan ulang. */
+:root {
+    --latar: #f8f5ec;
+    --teks: #263b32;
+    --coklat: #b04a32;
+    --kuning: #e8bb55;
+    --kuning-tua: #d9b45f;
+    --abu: #7a7a6a;
+    --kartu: #e8e8df;
+    --serif: Georgia, "Times New Roman", serif;
+    --sans: Arial, Helvetica, sans-serif;
+    --mono: "Courier New", monospace;
+}
+
+* {box-sizing: border-box;}
+
+body {
+    margin: 0;
+    background: var(--latar);
+    color: var(--teks);
+    font-family: var(--sans);
+}
+
+/* Link mengikuti warna teks. */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Tabel digunakan sebagai tata letak halaman. */
+table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+/* Isi setiap sel dimulai dari bagian atas. */
+td {
+    vertical-align: top;
+}
+
+/* Konten dibuat tidak terlalu lebar dan tetap berada di tengah. */
+.lebar {
+    width: 90%;
+    max-width: 1190px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Gaya label kecil dan huruf kapital. */
+.label,
+.mono {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.mono {
+    font-family: var(--mono);
+}
+
+/* Perataan teks. */
+.kanan {
+    text-align: right;
+}
+
+.tengah {
+    text-align: center;
+}
+
+/* Warna aksen untuk judul dan teks penting. */
+.merah,
+.aksen,
+.titik,
+.titik-merah,
+.penutup,
+.kategori {
+    color: var(--coklat);
+}
+
+/* Garis pemisah antar bagian. */
+.garis {
+    border: 0;
+    border-top: 1px solid rgba(38, 59, 50, 0.2);
+}
+
+/* Tanda tambah diletakkan di sisi kanan. */
+.plus {
+    margin: 18px 0 0;
+    text-align: right;
+}
+
+/* Header dibagi menjadi logo, menu, dan informasi. */
+.header {
+    border-bottom: 1px solid var(--teks);
+}
+
+.header td {
+    width: 33.33%;
+    vertical-align: middle;
+    padding: 24px 0;
+}
+
+.logo {
+    font: bold 30px var(--serif);
+}
+
+.menu {
+    text-align: center;
+}
+
+.menu a {
+    margin: 0 8px;
+}
+
+.info {
+    font: 10px var(--mono);
+    letter-spacing: 0.15em;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.hero {
+    /* Jarak antara header dan bagian pembuka. */
+    margin-top: 30px;
+    padding-top: 20px;
+}
+
+.hero-label {
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    margin: 0;
+    font: 600 clamp(48px, 9vw, 118px) / 1 var(--serif);
+}
+
+.judul,
+.deskripsi {
+    vertical-align: middle;
+}
+
+.deskripsi {
+    width: 35%;
+}
+
+.deskripsi .label {
+    margin-bottom: 20px;
+}
+
+.teks {
+    max-width: 260px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.link-garis {
+    display: block;
+    max-width: 260px;
+    margin-top: 20px;
+    border-bottom: 1px solid var(--teks);
+    font-size: 12px;
+    line-height: 2;
+}
+
+.arah {
+    float: right;
+}
+
+.bawah {
+    border-top: 1px solid rgba(38, 59, 50, 0.2);
+    font-size: 9px;
+    line-height: 3;
+}
+
+.pita {
+    /* Pita warna menjadi pembatas visual antar bagian. */
+    margin-top: 25px;
+    background: var(--kuning);
+    border-top: 1px solid var(--teks);
+    border-bottom: 1px solid var(--teks);
+    padding: 14px 20px;
+    font: italic 24px var(--serif);
+    white-space: nowrap;
+}
+
+.pita td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.bintang-kecil {
+    font-style: normal;
+}
+
+.catatan,
+.tiga {
+    /* Memberi ruang di antara section dan isi section. */
+    margin-top: 45px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.catatan .label,
+.tiga > tbody > tr:first-child .label {
+    margin-bottom: 25px;
+}
+
+.artikel {
+    /* Kolom artikel dibuat lebih lebar daripada kartu samping. */
+    width: 64%;
+}
+
+.kategori {
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.detail {
+    margin-left: 8px;
+    color: var(--abu);
+}
+
+.catatan h2 {
+    margin: 20px 0;
+    font: 400 42px / 1.1 var(--serif);
+}
+
+.lead {
+    max-width: 430px;
+    font: italic 20px / 1.4 var(--serif);
+}
+
+.isi {
+    max-width: 600px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.pertama::first-letter {
+    /* Membuat huruf pertama paragraf menjadi drop cap. */
+    float: left;
+    margin-right: 10px;
+    color: var(--coklat);
+    font: 80px / 0.8 var(--serif);
+}
+
+.penutup {
+    font-size: 13px;
+    font-style: italic;
+}
+
+.kartu {
+    /* Kartu samping memiliki latar berbeda agar mudah dibedakan. */
+    width: 36%;
+    background: var(--kartu);
+    border-top: 3px solid var(--teks);
+    padding: 20px;
+}
+
+.kartu .kanan {
+    float: right;
+}
+
+.aa {
+    margin: 25px 0 15px;
+    font: bold 100px / 1 var(--serif);
+}
+
+.judul-kecil {
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.kutip {
+    margin: 22px 0;
+    font: italic 21px / 1.4 var(--serif);
+}
+
+.definisi,
+.catatan-kecil {
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.catatan-kecil {
+    color: var(--abu);
+}
+
+.kutipan {
+    /* position relative menjadi acuan posisi tanda kutip besar. */
+    position: relative;
+    margin-top: 45px;
+    background: var(--kuning);
+    padding: 20px 0;
+}
+
+.tanda-kutip {
+    position: absolute;
+    left: 3%;
+    margin: 0;
+    color: rgba(38, 59, 50, 0.2);
+    font: bold 80px var(--serif);
+}
+
+.kutipan h2 {
+    margin: 55px 0;
+    font: 400 clamp(26px, 3.5vw, 44px) / 1.25 var(--serif);
+    text-align: center;
+}
+
+.kutipan em {
+    color: var(--kuning-tua);
+}
+
+.kutipan-bawah {
+    border-bottom: 1px solid rgba(38, 59, 50, 0.2);
+    font-size: 9px;
+    line-height: 3;
+    text-transform: uppercase;
+}
+
+.tiga-grid {
+    /* Border membentuk satu kotak yang berisi tiga kolom. */
+    border: 1px solid var(--teks);
+}
+
+.kotak {
+    /* Setiap kotak mengambil sepertiga lebar grid. */
+    width: 33.33%;
+    height: 220px;
+    padding: 12px;
+}
+
+.kotak p {
+    margin: 18px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.kotak .besar {
+    margin-top: 38px;
+    font: 700 42px var(--serif);
+}
+
+.kotak .kode {
+    font: 9px var(--mono);
+}
+
+.kuning {
+    background: var(--kuning-tua);
+}
+
+.merah-bg {
+    background: var(--coklat);
+    color: white;
+}
+
+.merah-bg .besar {
+    font-style: italic;
+}
+
+.kotak-abu {
+    background: var(--kartu);
+}
+
+.kotak-abu .besar {
+    font-family: var(--sans);
+    text-transform: uppercase;
+}
+
+.lab,
+.penutup-halaman,
+.footer {
+    /* Garis atas menandai pergantian bagian halaman. */
+    border-top: 1px solid var(--teks);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.lab {
+    margin-top: 45px;
+}
+
+.lab h2 {
+    margin: 25px 0;
+    font: 400 38px / 1.1 var(--serif);
+}
+
+.lab p {
+    max-width: 220px;
+    color: var(--abu);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.penutup-halaman {
+    margin-top: 45px;
+    text-align: center;
+}
+
+.penutup-halaman h3 {
+    margin: 25px 0 5px;
+    font: 400 24px var(--serif);
+}
+
+.abu {
+    color: var(--abu);
+    font: italic 22px var(--serif);
+}
+
+.kembali {
+    display: inline-block;
+    margin-top: 25px;
+    border-bottom: 1px solid var(--teks);
+    font-size: 10px;
+}
+
+.footer {
+    margin-top: 45px;
+}
+
+.footer td {
+    width: 33.33%;
+    vertical-align: middle;
+}
+
+.footer .logo {
+    font-size: 25px;
+}
+
+@media (max-width: 700px) {
+    /* Pada layar kecil, kolom ditumpuk agar mudah dibaca. */
+    .menu,
+    .info,
+    .bawah.kanan,
+    .footer .kanan {
+        display: none;
+    }
+
+    .judul,
+    .deskripsi,
+    .artikel,
+    .kartu,
+    .kotak {
+        display: block;
+        width: 100%;
+    }
+
+    .pita {
+        font-size: 18px;
+    }
+
+    .kotak {
+        height: auto;
+    }
+
+    .footer td {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}

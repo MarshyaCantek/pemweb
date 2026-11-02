@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pertemuan 1</title>
+</head>
+<!--css internal-->
+<style>
+    h1 {color:blue;}
+    * {color:rgb(70, 69, 69);}
+    #satu {width: 300px; height: 300px; background-color: rgb(0, 195, 255);}
+    .dua {width: 300px; height: 300px; background-color: palevioletred;}
+    .tiga {font-size: 20pt;}
+    #empat {font-size: 20pt;}
+    p b {background-color: yellow;}
+    ul li i {background-color: yellow;}
+    p:hover {background-color: palevioletred;}
+    p::first-letter{
+        /* font-family: monotype corsiva; font-size: 45pt; */
+        font: 45pt monotype corsiva
+        }
+        p {line-height: 10pt; text-align: justify; text-indent: 15pt;
+        text-transform: capitalize; word-spacing: 15%;}
+    body {
+        background: url(images/amigurui.jpg) center no-repeat
+    }
+</style>
+<body>
+    <!--css inline-->
+    <h1 style="color: palevioletred; font-family: Arial, Helvetica, sans-serif;">Haloo!</h1>
+    <p id="empat">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ratione alias repellat pariatur saepe veniam officiis in impedit labore porro fuga quam molestiae eius iure eos maxime at perferendis debitis.</p>
+    <div id="satu"> Ini daerah ID satu</div>
+    <div class="dua">Ini daerah class dua</div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt exercitationem molestiae unde aut quae, blanditiis consequatur, illo velit nesciunt reprehenderit aliquid alias officia numquam earum porro. Commodi, ex veritatis?</p>
+    <ul>
+        <li>Satu</li>
+        <li>Dua</li>
+    </ul>
+</body>
+</html>

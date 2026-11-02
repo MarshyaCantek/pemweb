@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertemuan 3 - Formulir</title>
+</head>
+<body>
+    <form action="" method="post"> <!--method post digunakan agar data seperti password tidak tampil di alamat web-->
+        <table align="center" width="30%">
+        <tr>
+            <td>User name</td>
+            <td><input type="text" name="txtuser" id="" placeholder="masukkan nama" pattern="[A-Za-z ]+"></td> <!--patern digunakan untuk format penulisan, contoh username harus huruf aja atau untuk password harus ada simbol, angka, huruf dll-->
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="password" name="txtpass" id="" placeholder="min 8 karakter" pattern="[A-Za-z]{8,12}"></td>
+        </tr>
+        <tr>
+            <td>Jenis Kelamin</td>
+            <td><input type="radio" name="jekl" id="" checked>Pria
+                <input type="radio" name="jekl" id="" checked>Wanita</td>
+        </tr>
+        <tr>
+            <td>Jurusan</td>
+            <td><select name="txtjur" id="">
+            <optgroup label="FTD"></optgroup> <!--combobox-->
+            <option value="TI">Teknik Informatika</option>
+            <option value="SK">Sistem Komputer</option>
+            <option value="DKV">Design Komunikasi Visual</option>
+            <optgroup label="FEB"></optgroup> <!--optgroup di gunakan untuk mengelompokkan opsi pilihan-->
+            <option value="PBM">Manajemen</option>
+            <option value="AK">Akuntansi</option>
+            <option value="IBM">International Business Manajement</option>
+        </select></td>
+        </tr>
+        <tr>
+            <td>Usia</td>
+            <td><input type="number" name="txtumur" id="" min="18" max="100"></td>
+        </tr>
+        <tr>
+            <td>Tanggal Lahir</td>
+            <td><input type="date" name="txttgl" id="" required></td> <!--required digunakan untuk inputan yg wajib di isi, akan muncul notif untuk memvalidasi-->
+        </tr>
+        <tr>
+            <td>Alamat</td>
+            <td><textarea name="txtalm" rows="4" cols="30"></textarea></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="submit">Kirim</button></td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
